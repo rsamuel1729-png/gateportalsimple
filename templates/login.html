@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<form class="form card" method="post">
+  <div class="kicker">PORTAL ACCESS</div>
+  <h1>Log in</h1>
+  <p class="muted">Select your account type and enter your credentials.</p>
+
+  <label>Login as
+    <select name="account_type" required>
+      <option value="student">Student</option>
+      <option value="admin">Admin</option>
+    </select>
+  </label>
+  <label>Email<input name="email" type="email" required autocomplete="username"></label>
+  <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+  <button class="btn">Log in</button>
+  <p>New student? <a href="/register">Create an account</a></p>
+</form>
+{% endblock %}
